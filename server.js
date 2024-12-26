@@ -159,7 +159,8 @@ app.get('/generate-pdf', async (req, res) => {
     // Set response headers
     console.log('[15] Setting response headers...');
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename=generated.pdf`);
+    const fileName = url.split('/').pop();
+    res.setHeader('Content-Disposition', `attachment; filename=${fileName}.pdf`);
     res.setHeader('Content-Length', pdfBuffer.length);
     
     // Send the PDF
