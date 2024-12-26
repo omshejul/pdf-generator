@@ -53,7 +53,7 @@ const deleteFileAfterDelay = async (filePath, delay = 5000) => {
       console.error(`[ERROR] Failed to delete temporary file: ${filePath}`, error);
     }
   }, delay);
-};
+}; 
 
 const config = {
   viewport: {
