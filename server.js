@@ -4,6 +4,9 @@ const path = require('path');
 const fs = require('fs').promises;
 const crypto = require('crypto');
 const cors = require('cors');
+const dotenv = require('dotenv');
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3010;
