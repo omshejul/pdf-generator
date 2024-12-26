@@ -9,10 +9,7 @@ const app = express();
 const port = process.env.PORT || 3010;
 
 // List of allowed origins
-const allowedOrigins = [
-  'http://localhost:3000',
-  '*', // Allow all origins for Postman
-];
+const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
 
 // CORS configuration
 const corsOptions = {
