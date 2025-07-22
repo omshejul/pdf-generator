@@ -12,7 +12,10 @@ const app = express();
 const port = process.env.PORT || 3010;
 
 // List of allowed origins
-const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
+const allowedOrigins = process.env.ALLOWED_ORIGINS 
+  ? process.env.ALLOWED_ORIGINS.split(',')
+  : [];
+
 
 // CORS configuration
 const corsOptions = {
