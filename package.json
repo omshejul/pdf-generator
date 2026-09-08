@@ -13,7 +13,13 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
-    "puppeteer": "^23.11.1"
+    "puppeteer": "^25.10.0"
   },
-  "description": ""
+  "description": "",
+  "overrides": {
+    "qs": "^6.16.0"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
 }
